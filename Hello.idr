@@ -1,4 +1,8 @@
 module Hello
 
+import System
+
 main : IO ()
-main = putStrLn "Hello World."
+main = do
+  [_,n] <- getArgs | _ => die "Please close your mouth"
+  putStrLn "Hello \{n}."
